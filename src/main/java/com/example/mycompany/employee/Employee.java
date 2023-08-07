@@ -1,4 +1,4 @@
-package model;
+package com.example.mycompany.employee;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -21,14 +21,16 @@ public class Employee {
     private String name;
     private String surName;
     private LocalDate dateOfBirth;
+    private String email;
     @Transient
     private int age;
     private BigDecimal salary;
 
-    public Employee(String name, String surName, LocalDate dateOfBirth, int age, BigDecimal salary) {
+    public Employee(String name, String surName, LocalDate dateOfBirth, String email, int age, BigDecimal salary) {
         this.name = name;
         this.surName = surName;
         this.dateOfBirth = dateOfBirth;
+        this.email = email;
         this.age = age;
         this.salary = salary;
     }
